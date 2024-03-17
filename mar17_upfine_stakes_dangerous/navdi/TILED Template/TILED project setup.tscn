@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://navdi/TILED Template/script/TILED project setup.gd" type="Script" id=1]
+[ext_resource path="res://13-Levels/mgb_sewer.png" type="Texture" id=2]
+
+
+
+[node name="TILED-setup" type="Node"]
+script = ExtResource( 1 )
+tiled_project_name = "13-Levels"
+tileset_spritesheet = ExtResource( 2 )
