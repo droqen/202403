@@ -1,0 +1,75 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://BranchChooser.gd" type="Script" id=1]
+[ext_resource path="res://navdi/Node Scripts/NavdiBanker.gd" type="Script" id=2]
+[ext_resource path="res://navdi/Node Scripts/NavdiSettings.gd" type="Script" id=3]
+[ext_resource path="res://BranchChoice.gd" type="Script" id=4]
+[ext_resource path="res://navdi/Node Scripts/Pin/PinSetup.gd" type="Script" id=5]
+[ext_resource path="res://story-branches-icon2.png" type="Texture" id=6]
+[ext_resource path="res://wakeupfont.tres" type="DynamicFont" id=7]
+[ext_resource path="res://navdi/Node Scripts/Sheet/SheetSprite.gd" type="Script" id=8]
+[ext_resource path="res://pixel/branches_sheet.tres" type="Resource" id=9]
+[ext_resource path="res://pixel/branches.png" type="Texture" id=10]
+[ext_resource path="res://branches/wakeup_0.tres" type="Resource" id=11]
+[ext_resource path="res://branches/eatfood_0.tres" type="Resource" id=12]
+[ext_resource path="res://navdi/Node Scripts/Pin/Pin.gd" type="Script" id=13]
+[ext_resource path="res://branches/findkeys_0.tres" type="Resource" id=14]
+
+[node name="XXI" type="Node2D"]
+
+[node name="pinsetup" type="Node" parent="."]
+script = ExtResource( 5 )
+
+[node name="bank" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="BranchChoice" type="Node2D" parent="bank"]
+modulate = Color( 0.952941, 0.94902, 0.780392, 1 )
+script = ExtResource( 4 )
+nice_colour = Color( 0.952941, 0.94902, 0.780392, 1 )
+item_colour = Color( 0.647059, 0.772549, 0.560784, 1 )
+fail_colour = Color( 0.929412, 0.439216, 0.305882, 1 )
+
+[node name="Label" type="Label" parent="bank/BranchChoice"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 7 )
+text = "Action (description)
+Test"
+
+[node name="settings" type="Node" parent="."]
+script = ExtResource( 3 )
+width = 200
+height = 200
+bg_color = Color( 0.482353, 0.439216, 0.34902, 1 )
+project_day = "14"
+project_name = "Wakeup Call"
+project_icon = ExtResource( 6 )
+
+[node name="Story-branches-icon2" type="Sprite" parent="."]
+position = Vector2( 100, 15 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 6 )
+
+[node name="BranchChooser" type="Node2D" parent="."]
+position = Vector2( 15, 30 )
+script = ExtResource( 1 )
+branches = [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 14 ) ]
+
+[node name="choices" type="Node2D" parent="BranchChooser"]
+
+[node name="cursor" type="Node2D" parent="BranchChooser"]
+
+[node name="curspr" type="Sprite" parent="BranchChooser/cursor"]
+position = Vector2( -6, 5 )
+texture = ExtResource( 10 )
+hframes = 10
+vframes = 10
+frame = 3
+script = ExtResource( 8 )
+sprite_sheet = ExtResource( 9 )
+_frames = [ 3, 3, 3, 4 ]
+_frame_period = 16
+
+[node name="Pin" type="Node" parent="BranchChooser"]
+script = ExtResource( 13 )

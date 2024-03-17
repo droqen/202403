@@ -164,6 +164,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://navdi/Node Scripts/Sheet/SheetSprite.gd"
 }, {
+"base": "Resource",
+"class": "StoryBranch",
+"language": "GDScript",
+"path": "res://StoryBranch.gd"
+}, {
 "base": "Reference",
 "class": "TileZone",
 "language": "GDScript",
@@ -216,6 +221,7 @@ _global_script_class_icons={
 "PreviewGrid": "",
 "Sheet": "",
 "SheetSprite": "",
+"StoryBranch": "",
 "TileZone": "",
 "TinyState": "",
 "ToolSpawnAssistant": "",
@@ -224,12 +230,33 @@ _global_script_class_icons={
 
 [application]
 
-config/name="mar14_wakeup"
-config/icon="res://icon.png"
+config/name="2024, March 14: Wakeup Call."
+run/main_scene="res://WakeupXXI.tscn"
+boot_splash/image="res://story-branches-icon2.png"
+boot_splash/fullsize=false
+boot_splash/bg_color=Color( 0.482353, 0.439216, 0.34902, 1 )
+config/icon="res://story-branches-icon2.png"
+boot_splash/filter=false
+
+[display]
+
+window/size/width=200
+window/size/height=200
+window/size/test_width=600
+window/size/test_height=600
+window/stretch/mode="viewport"
+
+[dynamic_fonts]
+
+use_oversampling=false
 
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[network]
+
+limits/debugger_stdout/max_errors_per_frame=100
 
 [physics]
 
@@ -238,6 +265,9 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 quality/driver/driver_name="GLES2"
+2d/snapping/use_gpu_pixel_snap=true
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
+environment/default_clear_color=Color( 0.482353, 0.439216, 0.34902, 1 )
 environment/default_environment="res://default_env.tres"
+quality/2d/use_pixel_snap=true
