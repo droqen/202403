@@ -231,7 +231,7 @@ _global_script_class_icons={
 [application]
 
 config/name="2024, March 16: UPFINE2."
-config/description="Iterating on UPFINE: Pickup and dropoff mechanics"
+config/description="Iterating on UPFINE: "
 run/main_scene="res://UpfineXXI.tscn"
 boot_splash/image="res://pixel/upfine_pickup10x10.png"
 boot_splash/fullsize=false
