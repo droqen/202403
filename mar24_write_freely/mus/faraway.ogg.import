@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/faraway.ogg-8d5aace983442e326857ea59a2c4d755.oggstr"
+
+[deps]
+
+source_file="res://mus/faraway.ogg"
+dest_files=[ "res://.import/faraway.ogg-8d5aace983442e326857ea59a2c4d755.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

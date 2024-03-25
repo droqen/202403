@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/curious.ogg-ca952aabecd076257dc3b8479469e4c2.oggstr"
+
+[deps]
+
+source_file="res://snd/curious.ogg"
+dest_files=[ "res://.import/curious.ogg-ca952aabecd076257dc3b8479469e4c2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

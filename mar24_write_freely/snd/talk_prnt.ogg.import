@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/talk_prnt.ogg-8bb870f81a2a2c7d9c066dea4d90adad.oggstr"
+
+[deps]
+
+source_file="res://snd/talk_prnt.ogg"
+dest_files=[ "res://.import/talk_prnt.ogg-8bb870f81a2a2c7d9c066dea4d90adad.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
