@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/dont leave me dragon.ogg-9633ed1fe40353a66633f3abf88bb9e9.oggstr"
+
+[deps]
+
+source_file="res://mus/dont leave me dragon.ogg"
+dest_files=[ "res://.import/dont leave me dragon.ogg-9633ed1fe40353a66633f3abf88bb9e9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

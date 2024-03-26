@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/victoryjingle.ogg-8f32e929ed0f5f74f9af1a5851f507df.oggstr"
+
+[deps]
+
+source_file="res://snd/victoryjingle.ogg"
+dest_files=[ "res://.import/victoryjingle.ogg-8f32e929ed0f5f74f9af1a5851f507df.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://pixel/thm.png" type="Texture" id=1]
+[ext_resource path="res://catcher.gd" type="Script" id=2]
+[ext_resource path="res://pixel/thm_sheet.tres" type="Resource" id=3]
+[ext_resource path="res://navdi/Node Scripts/Sheet/SheetSprite.gd" type="Script" id=4]
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 5.0
+
+[node name="catcher" type="Node2D"]
+position = Vector2( 15, 25 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SheetSprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 10
+vframes = 10
+frame = 1
+script = ExtResource( 4 )
+sprite_sheet = ExtResource( 3 )
+_frames = [ 1, 2, 3, 2 ]
+
+[node name="mitt" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 512
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mitt"]
+visible = false
+position = Vector2( 0, 1 )
+shape = SubResource( 6 )

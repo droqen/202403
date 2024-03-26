@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/talkc.wav-7e7317d58f9bc427e0558ee4c309b695.sample"
+
+[deps]
+
+source_file="res://snd/talkc.wav"
+dest_files=[ "res://.import/talkc.wav-7e7317d58f9bc427e0558ee4c309b695.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
