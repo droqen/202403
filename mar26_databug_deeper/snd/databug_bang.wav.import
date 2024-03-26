@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/databug_bang.wav-3d59c72f40afbf349ced0600615da347.sample"
+
+[deps]
+
+source_file="res://snd/databug_bang.wav"
+dest_files=[ "res://.import/databug_bang.wav-3d59c72f40afbf349ced0600615da347.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
