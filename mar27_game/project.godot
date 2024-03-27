@@ -1,0 +1,266 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "BasePantograph",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/Panto/BasePantograph.gd"
+}, {
+"base": "Reference",
+"class": "Bounds",
+"language": "GDScript",
+"path": "res://navdi/Utility Scripts/Bounds.gd"
+}, {
+"base": "Reference",
+"class": "Bufs",
+"language": "GDScript",
+"path": "res://navdi/Utility Scripts/bufs.gd"
+}, {
+"base": "Reference",
+"class": "ChoiceStack",
+"language": "GDScript",
+"path": "res://navdi/Utility Scripts/ChoiceStack.gd"
+}, {
+"base": "Reference",
+"class": "LumpyDictionary",
+"language": "GDScript",
+"path": "res://navdi/Utility Scripts/LumpyDictionary.gd"
+}, {
+"base": "MarginContainer",
+"class": "MarchingTextContainer",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/Convo/MarchingTextContainer.gd"
+}, {
+"base": "Reference",
+"class": "MazeObjectData",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/Maze/MazeObjectData.gd"
+}, {
+"base": "Area2D",
+"class": "NavdiAreaSweeper",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/NavdiAreaSweeper.gd"
+}, {
+"base": "Node",
+"class": "NavdiBanker",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/NavdiBanker.gd"
+}, {
+"base": "Sprite",
+"class": "NavdiBitsySprite",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/NavdiBitsySprite.gd"
+}, {
+"base": "NavdiMazeMaster",
+"class": "NavdiFlagEditor",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/Maze/FlagEditor/FlagEditor.gd"
+}, {
+"base": "NavdiMazeMaster",
+"class": "NavdiFlagMazeMaster",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/Maze/FlagEditor/FlagMazeMaster.gd"
+}, {
+"base": "Node",
+"class": "NavdiFocuser",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/NavdiFocuser.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "NavdiJumper",
+"language": "GDScript",
+"path": "res://navdi/xUnsorted/NavdiJumper.gd"
+}, {
+"base": "RigidBody2D",
+"class": "NavdiMazeBody",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/Maze/Body.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "NavdiMazeKineBody",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/Maze/KineBody.gd"
+}, {
+"base": "Node",
+"class": "NavdiMazeLoaderTool",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/Maze/^MazeLoaderTool.gd"
+}, {
+"base": "TileMap",
+"class": "NavdiMazeMaster",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/Maze/MazeMaster.gd"
+}, {
+"base": "Node2D",
+"class": "NavdiMazeNobody",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/Maze/Nobody.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "NavdiMovingGuy",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/NavdiMovingGuy.gd"
+}, {
+"base": "BasePantograph",
+"class": "NavdiPantograph",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/Panto/NavdiPantograph.gd"
+}, {
+"base": "Node",
+"class": "NavdiSettings",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/NavdiSettings.gd"
+}, {
+"base": "Reference",
+"class": "NavdiTILEDLevelHandler",
+"language": "GDScript",
+"path": "res://navdi/Utility Scripts/NavdiTILEDLevelHandler.gd"
+}, {
+"base": "Node",
+"class": "NavdiXXI",
+"language": "GDScript",
+"path": "res://navdi/xUnsorted/NavdiXXI.gd"
+}, {
+"base": "NavdiPantograph",
+"class": "Panto_Linker",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/Panto/Panto_Linker.gd"
+}, {
+"base": "Node",
+"class": "Pin",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/Pin/Pin.gd"
+}, {
+"base": "Reference",
+"class": "PinButton",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/Pin/PinButton.gd"
+}, {
+"base": "Node",
+"class": "PinSetup",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/Pin/PinSetup.gd"
+}, {
+"base": "Node2D",
+"class": "PreviewGrid",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/PreviewGrid.gd"
+}, {
+"base": "Resource",
+"class": "Sheet",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/Sheet/Sheet.gd"
+}, {
+"base": "Sprite",
+"class": "SheetSprite",
+"language": "GDScript",
+"path": "res://navdi/Node Scripts/Sheet/SheetSprite.gd"
+}, {
+"base": "Reference",
+"class": "TileZone",
+"language": "GDScript",
+"path": "res://navdi/Utility Scripts/TileZone.gd"
+}, {
+"base": "Reference",
+"class": "TinyState",
+"language": "GDScript",
+"path": "res://navdi/Utility Scripts/tiny_state.gd"
+}, {
+"base": "Reference",
+"class": "ToolSpawnAssistant",
+"language": "GDScript",
+"path": "res://navdi/Utility Scripts/ToolSpawnAssistant.gd"
+}, {
+"base": "Reference",
+"class": "WeightedDeck",
+"language": "GDScript",
+"path": "res://navdi/Utility Scripts/WeightedDeck.gd"
+} ]
+_global_script_class_icons={
+"BasePantograph": "",
+"Bounds": "",
+"Bufs": "",
+"ChoiceStack": "",
+"LumpyDictionary": "",
+"MarchingTextContainer": "",
+"MazeObjectData": "",
+"NavdiAreaSweeper": "",
+"NavdiBanker": "",
+"NavdiBitsySprite": "",
+"NavdiFlagEditor": "",
+"NavdiFlagMazeMaster": "",
+"NavdiFocuser": "",
+"NavdiJumper": "",
+"NavdiMazeBody": "",
+"NavdiMazeKineBody": "",
+"NavdiMazeLoaderTool": "",
+"NavdiMazeMaster": "",
+"NavdiMazeNobody": "",
+"NavdiMovingGuy": "",
+"NavdiPantograph": "",
+"NavdiSettings": "",
+"NavdiTILEDLevelHandler": "",
+"NavdiXXI": "",
+"Panto_Linker": "",
+"Pin": "",
+"PinButton": "",
+"PinSetup": "",
+"PreviewGrid": "",
+"Sheet": "",
+"SheetSprite": "",
+"TileZone": "",
+"TinyState": "",
+"ToolSpawnAssistant": "",
+"WeightedDeck": ""
+}
+
+[application]
+
+config/name="2024, March 27: Indigo Choice."
+run/main_scene="res://IndigoChoiceXXI.tscn"
+boot_splash/image="res://navdi/Resources/icon.png"
+boot_splash/fullsize=false
+boot_splash/bg_color=Color( 0.286275, 0.196078, 0.635294, 1 )
+config/icon="res://navdi/Resources/icon.png"
+boot_splash/filter=false
+
+[display]
+
+window/size/width=200
+window/size/height=130
+window/size/test_width=600
+window/size/test_height=390
+window/stretch/mode="viewport"
+
+[dynamic_fonts]
+
+use_oversampling=false
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[network]
+
+limits/debugger_stdout/max_errors_per_frame=100
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_clear_color=Color( 0.286275, 0.196078, 0.635294, 1 )
+environment/default_environment="res://default_env.tres"
+quality/2d/use_pixel_snap=true
