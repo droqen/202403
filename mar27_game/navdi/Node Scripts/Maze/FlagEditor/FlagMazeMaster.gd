@@ -40,7 +40,8 @@ func _ready():
 		if flag_editors_parent.has_node(flag_editor_name):
 			flagmaze_setup(flag_editors_parent.get_node(flag_editor_name))
 		for child in flag_editors_parent.get_children():
-			child.call_deferred("hide") # hide all flag editors
+			if child.name == flag_editor_name:
+				child.call_deferred("hide") # hide all flag editors
 
 func flagmaze_setup(flag_editor: NavdiFlagEditor):
 	self.flag_editor_name = flag_editor.name

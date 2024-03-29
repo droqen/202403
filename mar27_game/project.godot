@@ -225,11 +225,12 @@ _global_script_class_icons={
 [application]
 
 config/name="2024, March 27: Indigo Choice."
+config/description=" "
 run/main_scene="res://IndigoChoiceXXI.tscn"
-boot_splash/image="res://navdi/Resources/icon.png"
+boot_splash/image="res://indigo10x10.png"
 boot_splash/fullsize=false
 boot_splash/bg_color=Color( 0.286275, 0.196078, 0.635294, 1 )
-config/icon="res://navdi/Resources/icon.png"
+config/icon="res://indigo10x10.png"
 boot_splash/filter=false
 
 [display]
@@ -259,6 +260,7 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 quality/driver/driver_name="GLES2"
+2d/snapping/use_gpu_pixel_snap=true
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
 environment/default_clear_color=Color( 0.286275, 0.196078, 0.635294, 1 )
