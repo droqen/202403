@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/card_deal.ogg-ea3d198f3f5a1d26e5ada5a53c5a7ad9.oggstr"
+
+[deps]
+
+source_file="res://snd/card_deal.ogg"
+dest_files=[ "res://.import/card_deal.ogg-ea3d198f3f5a1d26e5ada5a53c5a7ad9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
