@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/non_stumbling_piano.ogg-e6c6910494d524be6a40c5e3c23f0e91.oggstr"
+
+[deps]
+
+source_file="res://snd/non_stumbling_piano.ogg"
+dest_files=[ "res://.import/non_stumbling_piano.ogg-e6c6910494d524be6a40c5e3c23f0e91.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

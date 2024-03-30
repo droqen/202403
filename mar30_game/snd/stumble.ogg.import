@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/stumble.ogg-f0e4436ff2a4219edf690527b70797ee.oggstr"
+
+[deps]
+
+source_file="res://snd/stumble.ogg"
+dest_files=[ "res://.import/stumble.ogg-f0e4436ff2a4219edf690527b70797ee.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
