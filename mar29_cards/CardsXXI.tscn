@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://card(physical).tscn" type="PackedScene" id=1]
 [ext_resource path="res://navdi/Node Scripts/NavdiBanker.gd" type="Script" id=2]
@@ -12,6 +12,16 @@
 [ext_resource path="res://pixel/cards.png" type="Texture" id=10]
 [ext_resource path="res://navdi/Node Scripts/Pin/Pin.gd" type="Script" id=11]
 [ext_resource path="res://hand.gd" type="Script" id=12]
+[ext_resource path="res://snd/card_power.ogg" type="AudioStream" id=13]
+[ext_resource path="res://snd/card_trash.ogg" type="AudioStream" id=14]
+[ext_resource path="res://snd/card_click.ogg" type="AudioStream" id=15]
+[ext_resource path="res://navdi/Resources/fonts/raw/droqenserif.ttf" type="DynamicFontData" id=16]
+[ext_resource path="res://snd/theme_loss.ogg" type="AudioStream" id=17]
+[ext_resource path="res://snd/theme_win.ogg" type="AudioStream" id=18]
+[ext_resource path="res://snd/theme_miniloss.ogg" type="AudioStream" id=19]
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 16 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 150, 10 )
@@ -35,14 +45,51 @@ width = 300
 height = 200
 bg_color = Color( 0.952941, 0.94902, 0.780392, 1 )
 project_day = "29"
-project_name = "zujana"
+project_name = "Ridiculous Card Game"
 project_icon = ExtResource( 8 )
+
+[node name="status_label" type="Label" parent="."]
+modulate = Color( 0.94902, 0.737255, 0.623529, 1 )
+margin_right = 171.0
+margin_bottom = 200.0
+custom_fonts/font = SubResource( 4 )
+text = "14/14"
+align = 2
+valign = 1
+
+[node name="status_label2" type="Label" parent="."]
+modulate = Color( 0.94902, 0.737255, 0.623529, 1 )
+margin_left = 1.0
+margin_right = 172.0
+margin_bottom = 200.0
+custom_fonts/font = SubResource( 4 )
+text = "14/14"
+align = 2
+valign = 1
 
 [node name="card_sssspawner" type="Node" parent="."]
 script = ExtResource( 4 )
 
 [node name="deal" type="AudioStreamPlayer" parent="card_sssspawner"]
 stream = ExtResource( 5 )
+
+[node name="power" type="AudioStreamPlayer" parent="card_sssspawner"]
+stream = ExtResource( 13 )
+
+[node name="trash" type="AudioStreamPlayer" parent="card_sssspawner"]
+stream = ExtResource( 14 )
+
+[node name="theme_win" type="AudioStreamPlayer" parent="card_sssspawner"]
+pause_mode = 2
+stream = ExtResource( 18 )
+
+[node name="theme_loss" type="AudioStreamPlayer" parent="card_sssspawner"]
+pause_mode = 2
+stream = ExtResource( 17 )
+
+[node name="theme_miniloss" type="AudioStreamPlayer" parent="card_sssspawner"]
+pause_mode = 2
+stream = ExtResource( 19 )
 
 [node name="walls" type="StaticBody2D" parent="."]
 collision_mask = 0
@@ -68,7 +115,7 @@ one_way_collision = true
 
 [node name="hand" type="Node2D" parent="."]
 position = Vector2( 39, 81 )
-z_index = 2
+z_index = 4
 script = ExtResource( 12 )
 
 [node name="Pin" type="Node" parent="hand"]
@@ -90,3 +137,7 @@ collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hand/pointzone"]
 shape = SubResource( 3 )
+
+[node name="click" type="AudioStreamPlayer" parent="hand"]
+pause_mode = 2
+stream = ExtResource( 15 )

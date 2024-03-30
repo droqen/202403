@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/card_trash.ogg-db54547e885f1fa7734550cd98fda412.oggstr"
+
+[deps]
+
+source_file="res://snd/card_trash.ogg"
+dest_files=[ "res://.import/card_trash.ogg-db54547e885f1fa7734550cd98fda412.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

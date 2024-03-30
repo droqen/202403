@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://pixel/cards.png" type="Texture" id=1]
 [ext_resource path="res://card(physical).gd" type="Script" id=2]
 [ext_resource path="res://navdi/Resources/fonts/fiver.tres" type="DynamicFont" id=3]
+[ext_resource path="res://navdi/Resources/fonts/thin8high.tres" type="DynamicFont" id=4]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 15, 20 )
@@ -37,6 +38,27 @@ theme = SubResource( 4 )
 text = "There is no life without videogame"
 align = 1
 valign = 1
+autowrap = true
+
+[node name="NumberLabel" type="Label" parent="."]
+modulate = Color( 0.207843, 0.254902, 0.282353, 1 )
+margin_left = -14.0
+margin_top = -20.0
+margin_right = 16.0
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 4 )
+text = "13"
+autowrap = true
+
+[node name="NumberLabel2" type="Label" parent="."]
+modulate = Color( 0.207843, 0.254902, 0.282353, 1 )
+margin_left = 14.0
+margin_top = 20.0
+margin_right = 44.0
+margin_bottom = 60.0
+rect_rotation = -179.978
+custom_fonts/font = ExtResource( 4 )
+text = "13"
 autowrap = true
 
 [node name="repelzone" type="Area2D" parent="."]
